@@ -1,0 +1,124 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  padding: 0 $container;
+  width: 100%;
+}
+
+.section {
+  &__title {
+    margin-bottom: 36px;
+    @include font(36, 42, 700);
+
+    &--center {
+      text-align: center;
+    }
+  }
+}
+
+.btn {
+  $btn-border-radius-big: 8px;
+  $btn-border-radius-small: 5px;
+
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: $white;
+  border: 0;
+  cursor: pointer;
+
+  &--primary#{&}--solid {
+    background-color: $primary;
+  }
+  &--secondary#{&}--solid {
+    background-color: $secondary;
+  }
+  &--danger#{&}--solid {
+    background-color: $danger;
+  }
+
+  &--big {
+    padding: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-radius: $btn-border-radius-big;
+  }
+
+  &--small {
+    padding: 12px;
+    line-height: 16px;
+    text-transform: capitalize;
+    border-radius: $btn-border-radius-small;
+  }
+}
+
+.icon {
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all .2s ease-out;
+
+  &:hover {
+    transition: all .2s ease-out;
+  }
+}
+
+.bg {
+  &--primary {
+    background-color: $primary;
+  }
+  &--secondary {
+    background-color: $secondary;
+  }
+}
+
+.filter {
+  &--primary {
+    filter: brightness(0) saturate(100%) invert(26%) sepia(44%) saturate(1590%) hue-rotate(183deg) brightness(89%) contrast(94%);
+  }
+  &--grey {
+    filter: invert(72%) sepia(1%) saturate(0%) hue-rotate(347deg) brightness(97%) contrast(91%);
+  }
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.visually-hidden {
+  border-width: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

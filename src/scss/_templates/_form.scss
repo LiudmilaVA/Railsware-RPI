@@ -1,0 +1,165 @@
+.form {
+
+  &__holder {
+    @include mgCenter();
+    width: 344px;
+  }
+
+  &__field {
+    margin-bottom: 36px;
+    position: relative;
+
+    &--with_icon {
+      & .form__input {
+        padding-left: 46px;
+      }
+    }
+
+    & .icon {
+      $iconSize: 25px;
+
+      position: absolute;
+      top: calc(100% / 2 - #{$iconSize} / 2);
+      left: 12px;
+      width: $iconSize;
+      height: $iconSize;
+      font-size: 25px;
+      color: #AEAEAE;
+    }
+
+    &--error {
+      & .form__input {
+        border-color: $danger;
+
+        @include inputHover($danger, 10%);
+      }
+    }
+
+    & + .form__field-link {
+      margin-bottom: 10px;
+    }
+  }
+
+  //&__field-link {
+  //  display: inline-block;
+  //  @include font(16, 19);
+  //  color: $primary;
+  //  text-align: right;
+  //}
+
+  &__label {}
+
+  &__input {
+    padding: 17px 18px;
+    width: 100%;
+    @include font(16, 16, 400);
+    color: $primary;
+    background-color: $white;
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+    transition: all .3s ease-out;
+    outline: none;
+    
+    &::placeholder {
+      color: $grey;
+    }
+
+    &:focus {
+      border-color: $primary;
+      transition: all .3s ease-out;
+
+      & + .icon {
+        color: $primary;
+        transition: all .3s ease-out;
+      }
+    }
+
+    @include inputHover($primary, 50%);
+  }
+
+  &__footnote {
+    @include font(16, 19);
+    color: $muted;
+    text-align: center;
+
+    &-link {
+      color: $primary;
+    }
+  }
+
+  &__group  {
+    display: flex;
+    justify-content: space-between;
+
+    & .form__field {
+      width: calc(100% / 2 - 14px / 2);
+    }
+  }
+
+  &__error {
+    @include textUnderInput(16, 5);
+    left: 0;
+    color: $danger;
+  }
+
+  &__tooltip {
+    @include textUnderInput(16, 5);
+    right: 0;
+    color: $grey;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+
+      &::before,
+      &::after {
+        z-index: 1;
+        opacity: 1;
+        transition: all .2s ease-out;
+      }
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      transition: all .2s ease-out;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    &::before {
+      right: 10px;
+      top: -60px;
+      content: attr(data-tooltip);
+      background-color: $primary;
+      color: $white;
+      width: 200px;
+      border-radius: 5px;
+      padding: 8px;
+    }
+
+    &::after {
+      content: '';
+      top: -12px;
+      right: 25px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 7.5px 0 7.5px;
+      border-color: $primary transparent transparent transparent;
+    }
+  }
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "RailswareRPI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Liudmila Vaskovska <luidya.vaskovska@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-file-include": "^2.1.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "imagemin-pngquant": "^8.0.0",
+    "jquery-custom-select": "^1.6.4",
+    "moment": "^2.26.0",
+    "node-sass": "^4.14.1",
+    "rimraf": "^3.0.2"
+  }
+}

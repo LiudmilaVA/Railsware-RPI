@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>UI</title>
+
+    <link rel='stylesheet' href='fonts/stylesheet.css?v=1'>
+    <link rel='stylesheet' href='libs/icomoon/style.css?v=1'>
+    <link rel='stylesheet' href='css/index.css?v=1'>
+
+</head>
+<body>
+
+
+<main>
+
+
+
+<section>
+    <div class="container">
+
+        <div class="form__holder">
+            <h1>UI</h1>
+
+            <h2 class="section__title">Welcome Back!</h2>
+            <h2 class="section__title section__title--center">Welcome Back!</h2>
+
+            <form class="form" action="/">
+                <div class="form__field">
+                    <label class="form__label visually-hidden" for="cardNumberError">Card Number</label>
+                    <input class="form__input" type="number" name="cardNumberError" id="cardNumberError" inputmode="numeric" pattern="[0-9\s]{13,19}" placeholder="Card Number" maxlength="19" autofocus required>
+                </div>
+
+                <div class="form__field form__field--error">
+                    <label class="form__label visually-hidden" for="cardNumber">Card Number</label>
+                    <input class="form__input" type="number" name="cardNumber" id="cardNumber" inputmode="numeric" pattern="[0-9\s]{13,19}" placeholder="Card Number" maxlength="19" required>
+                    <span class="form__error">Some error</span>
+                </div>
+
+                <div class="form__field form__field--with_icon">
+                    <label class="form__label visually-hidden" for="loginEmail">example@email.com</label>
+                    <input class="form__input" type="email" name="loginEmail" id="loginEmail" placeholder="example@email.com" required>
+                    <span class="icon icon-user"></span>
+                </div>
+
+                <div class="form__field form__field--with_icon">
+                    <label class="form__label visually-hidden" for="loginPassword">password</label>
+                    <input class="form__input" type="password" name="loginPassword" id="loginPassword" placeholder="password" required>
+                    <span class="icon icon-lock"></span>
+                </div>
+
+<!--                <a href="#" class="form__field-link">Forgot Password?</a>-->
+
+                <div class="form__group">
+                    <div class="form__field">
+                        <label class="form__label visually-hidden" for="cardDateExpiration">MM/YY</label>
+                        <input class="form__input" type="number" name="cardDateExpiration" id="cardDateExpiration" placeholder="MM/YY" title="Four numbers for month and year" required>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label visually-hidden" for="cardCode">CVV</label>
+                        <input class="form__input" type="number" name="cardCode" id="cardCode" placeholder="CVV" title="Three numbers of card code" required>
+                        <span class="form__tooltip"
+                              data-tooltip="CVV is the last three digits on the back of your credit card">What’s this?</span>
+                    </div>
+                </div>
+
+                <button class="btn btn--primary btn--solid btn--big">Log in</button>
+                <button class="btn btn--secondary btn--solid btn--big">Upgrade</button>
+                <br>
+                <button class="btn btn--primary btn--solid btn--small">Facebook</button>
+                <button class="btn btn--danger btn--solid btn--small">Google</button>
+
+                <p class="form__footnote">Or connect with social</p>
+                <p class="form__footnote">Already have an account? <a class="form__footnote-link" href="#">Login here</a></p>
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+
+</main>
+
+
+</body>
+
+</html>

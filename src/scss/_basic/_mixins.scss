@@ -1,0 +1,32 @@
+@mixin font($fz, $lh, $fw: null) {
+  font-size: #{$fz}px;
+  line-height: #{$lh}px;
+
+  @if $fw != null {
+    font-weight: #{$fw};
+  }
+}
+
+@mixin bgImage($size: cover, $positionX: center, $positionY: center) {
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $positionX $positionY;
+}
+
+@mixin mgCenter() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin inputHover($color, $colorPercent) {
+  &:hover:not(:focus) {
+    border-color: $color;
+    box-shadow: 0 0 2px 1px lighten($color, $colorPercent);
+  }
+}
+
+@mixin textUnderInput($textHeight, $marginTop) {
+  position: absolute;
+  bottom: calc(-#{$textHeight}px - #{$marginTop}px);
+  @include font(14, $textHeight);
+}
