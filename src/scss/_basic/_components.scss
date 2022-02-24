@@ -17,17 +17,6 @@ main {
   width: 100%;
 }
 
-.section {
-  &__title {
-    margin-bottom: 36px;
-    @include font(36, 42, 700);
-
-    &--center {
-      text-align: center;
-    }
-  }
-}
-
 .btn {
   $btn-border-radius-big: 8px;
   $btn-border-radius-small: 5px;
@@ -40,15 +29,30 @@ main {
   color: $white;
   border: 0;
   cursor: pointer;
+  transition: all .2s ease-out;
+
+  &:hover,
+  &:active {
+    transition: all .2s ease-out;
+  }
 
   &--primary#{&}--solid {
     background-color: $primary;
+
+    @include btnHoverState($primary, 15%);
+    @include btnActiveState($primary, 5%);
   }
   &--secondary#{&}--solid {
     background-color: $secondary;
+
+    @include btnHoverState($secondary, 15%);
+    @include btnActiveState($secondary, 5%);
   }
   &--danger#{&}--solid {
     background-color: $danger;
+
+    @include btnHoverState($danger, 10%);
+    @include btnActiveState($danger, 3%);
   }
 
   &--big {

@@ -30,3 +30,14 @@
   bottom: calc(-#{$textHeight}px - #{$marginTop}px);
   @include font(14, $textHeight);
 }
+
+@mixin btnHoverState($color, $brightness) {
+  &:hover {
+    background-color: lighten($color, $brightness);
+  }
+}
+@mixin btnActiveState($color, $brightness) {
+  &:active {
+    background-color: darken($color, $brightness);
+  }
+}

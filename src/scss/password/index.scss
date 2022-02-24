@@ -1,0 +1,14 @@
+.password {
+
+  @media #{$lg} {
+    padding-bottom: 86px;
+  }
+
+  &__footnote {
+    margin-top: 150px;
+
+    @media #{$sm} {
+      margin-top: 200px;
+    }
+  }
+}

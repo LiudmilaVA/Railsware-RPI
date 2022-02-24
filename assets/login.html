@@ -18,27 +18,42 @@
 
 
 
-<section>
+<section class="login form-section">
     <div class="container">
-        
-        <div class="">
-            <img src="img/forms/login.png" alt="Woman in a blue coat is logging in her phone.">
+
+        <div class="form__holder">
+            <div class="form-section__img fs__img--small">
+                <img src="img/forms/login.png" alt="Woman in a blue coat is logging in her phone.">
+            </div>
+
+            <h2 class="form-section__title fs__ttl--center">Welcome Back!</h2>
+
+            <form action="/" class="login-form form">
+                <div class="form__field form__field--with_icon">
+                    <label class="form__label visually-hidden" for="loginEmail">example@email.com</label>
+                    <input class="form__input" type="email" name="loginEmail" id="loginEmail" placeholder="example@email.com" required>
+                    <span class="icon icon-user"></span>
+                </div>
+
+                <div class="form__field form__field--with_icon">
+                    <label class="form__label visually-hidden" for="loginPassword">password</label>
+                    <input class="form__input" type="password" name="loginPassword" id="loginPassword" placeholder="password" required>
+                    <span class="icon icon-lock"></span>
+                </div>
+
+                <a class="login__link form-section__link" href="password.html">Forgot Password?</a>
+
+                <button type="submit" class="form__btn btn btn--primary btn--solid btn--big">Log in</button>
+            </form>
+
+            <p class="login__footnote form__footnote">Or connect with social</p>
+
+            <div class="socials-login">
+                <button class="btn btn--primary btn--solid btn--small">Facebook</button>
+                <button class="btn btn--danger btn--solid btn--small">Google</button>
+            </div>
         </div>
-        
-        <h2 class="">Welcome Back!</h2>
 
-        <form action="/" id="formLogin">
-            <div class="form__field">
-                <label class="form__label hidden" for="loginEmail">example@email.com</label>
-                <input class="form__input" type="email" name="loginEmail" id="loginEmail" placeholder="example@email.com" required>
-            </div>
-            <div class="form__field">
-                <label class="form__label hidden" for="loginPassword">password</label>
-                <input class="form__input" type="password" name="loginPassword" id="loginPassword" placeholder="password" required>
-            </div>
-
-            <button class="btn btn_main form__btn" type="submit">Log in</button>
-        </form>
     </div>
 </section>
 

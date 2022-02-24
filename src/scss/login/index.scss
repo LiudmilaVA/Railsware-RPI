@@ -1,0 +1,36 @@
+.login {
+  @media #{$lg} {
+    padding-bottom: 75px;
+  }
+
+  &-form {
+    margin-bottom: 45px;
+
+    @media #{$sm} {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__link {
+    margin-top: 10px;
+    margin-left: auto;
+    display: block;
+    width: fit-content;
+  }
+
+  &__footnote {
+    margin-bottom: 28px;
+
+    @media #{$sm} {
+      margin-bottom: 36px;
+    }
+  }
+
+  & .form__btn {
+    margin-top: 35px;
+
+    @media #{$sm} {
+      margin-top: 50px;
+    }
+  }
+}

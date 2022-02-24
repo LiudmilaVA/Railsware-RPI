@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Upgrade</title>
+
+    <link rel='stylesheet' href='fonts/stylesheet.css?v=1'>
+    <link rel='stylesheet' href='libs/icomoon/style.css?v=1'>
+    <link rel='stylesheet' href='css/index.css?v=1'>
+
+</head>
+<body>
+
+
+<main>
+
+
+
+<section class="upgrade form-section">
+    <div class="container">
+
+        <div class="form__holder">
+            <h2 class="form-section__title fs__ttl--center">Get Pro Account</h2>
+
+            <div class="form-section__img fs__img--big">
+                <img src="img/forms/upgrade.png" alt="">
+            </div>
+
+            <form action="/" class="form">
+                <div class="form__field">
+                    <label class="form__label visually-hidden" for="cardNumber">Card Number</label>
+                    <input class="form__input" type="number" name="cardNumber" id="cardNumber" inputmode="numeric" pattern="[0-9\s]{13,19}" placeholder="Card Number" maxlength="19" required>
+                </div>
+
+                <div class="form__group">
+                    <div class="form__field">
+                        <label class="form__label visually-hidden" for="cardDateExpiration">MM/YY</label>
+                        <input class="form__input" type="number" name="cardDateExpiration" id="cardDateExpiration" placeholder="MM/YY" title="Four numbers for month and year" required>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label visually-hidden" for="cardCode">CVV</label>
+                        <input class="form__input" type="number" name="cardCode" id="cardCode" placeholder="CVV" title="Three numbers of card code" required>
+                        <span class="form__tooltip"
+                              data-tooltip="CVV is the last three digits on the back of your credit card">What’s this?</span>
+                    </div>
+                </div>
+
+                <div class="form__field">
+                    <label class="form__label visually-hidden" for="zipPostalCode">ZIP/Postal Coder</label>
+                    <input class="form__input" type="number" name="zipPostalCode" id="zipPostalCode" placeholder="ZIP/Postal Code" required>
+                </div>
+
+                <button class="form__btn btn btn--secondary btn--solid btn--big">Upgrade</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+
+
+</main>
+
+
+</body>
+
+</html>

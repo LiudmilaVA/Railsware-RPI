@@ -1,0 +1,8 @@
+.socials-login {
+  display: flex;
+  justify-content: space-between;
+
+  & .btn {
+    width: calc(100% / 2 - 14px / 2);
+  }
+}
